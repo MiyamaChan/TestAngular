@@ -1,0 +1,21 @@
+<div class="wrapper-section">
+  <h2>{{ taskTitle() }}</h2>
+  <div class="to-do__wrapper">
+    <div class="wrapper-two-element">
+      <input type="text" [(ngModel)]="newToDo" placeholder="Description..." />
+      <button (click)="addTask()">Add</button>
+    </div>
+
+    <div class="to-do__list">
+      @for(task of tasks; track task.id){
+      <div class="list__item">
+        <p class="item-text">{{ task.content }}</p>
+        <p>{{ task.createAt | date : 'short' }}</p>
+        <button class="delete-btn" (click)="deleteTask(task.id)">
+          <img class="delete-btn__img" src="/assets/imgs/trash.svg" alt="delete" />
+        </button>
+      </div>
+      }
+    </div>
+  </div>
+</div>

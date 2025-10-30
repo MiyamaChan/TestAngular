@@ -1,0 +1,10 @@
+<div class="counter__wrapper wrapper-section">
+  <h2>{{ counterTitle() }}</h2>
+  <p class="counter__value">Counter value: {{ counterValue() }}</p>
+
+  <div class="counter__wrapper">
+    <button class="counter__btn" (click)="increment()">Increment</button>
+    <button class="counter__btn" (click)="reset()">Reset</button>
+    <button class="counter__btn" (click)="decrement()">Dencrement</button>
+  </div>
+</div>
